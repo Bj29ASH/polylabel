@@ -9,7 +9,7 @@ add_library(polylabel INTERFACE)
 target_include_directories(polylabel
   INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/mapbox>
+  $<INSTALL_INTERFACE:include>
 )
 
 include(CMakePackageConfigHelpers)
@@ -28,7 +28,7 @@ install(TARGETS polylabel
 
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/include/mapbox"
-  DESTINATION include/mapbox
+  DESTINATION include
 )
 
 install(
